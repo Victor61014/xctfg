@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentación IA</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f172a;
+        --card: rgba(15, 23, 42, 0.82);
+        --text: #e2e8f0;
+        --muted: #cbd5e1;
+        --accent: #38bdf8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        background: radial-gradient(circle at top, #1e293b 0%, #020617 65%);
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      main {
+        width: min(720px, 100%);
+        background: var(--card);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 20px;
+        padding: 32px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      p {
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      a.button {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 700;
+        color: #082f49;
+        background: var(--accent);
+        padding: 14px 18px;
+        border-radius: 999px;
+      }
+
+      .secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid rgba(148, 163, 184, 0.35);
+      }
+
+      code {
+        background: rgba(148, 163, 184, 0.15);
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Host local listo</h1>
+      <p>
+        Este proyecto ahora incluye una página de inicio sencilla para abrirlo en
+        <code>localhost</code> y descargar la presentación sobre IA.
+      </p>
+      <div class="actions">
+        <a class="button" href="presentacion_ia.pptx">Descargar presentación</a>
+        <a class="button secondary" href="README.md">Ver README</a>
+      </div>
+      <p>
+        Para levantarlo localmente, ejecuta <code>python3 -m http.server 8000</code>
+        en la raíz del proyecto y abre <code>http://localhost:8000</code>.
+      </p>
+    </main>
+  </body>
+</html>
